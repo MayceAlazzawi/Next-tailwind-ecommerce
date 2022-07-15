@@ -1,4 +1,4 @@
-import data from '../utils/data'
+import data from '../../utils/data'
 import { useRouter } from 'next/router';
 import React from 'react'
 import Layout from '../../components/Layout'
