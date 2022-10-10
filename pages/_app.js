@@ -1,14 +1,12 @@
-import '../styles/globals.css';
+import '../styles/globals.css'
 import { SessionProvider } from 'next-auth/react';
-import { StoreProvider } from '../utils/store';
 
-function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+function MyApp({ Component, pageProps: { session, ...pageProps }, }) {
   return (
-    <SessionProvider session={session}>
-      <StoreProvider>
-        <Component {...pageProps} />
-      </StoreProvider>
+    <SessionProvider session={pageProps.session}>
+      <Component {...pageProps} />
     </SessionProvider>
   );
 }
+
 export default MyApp
